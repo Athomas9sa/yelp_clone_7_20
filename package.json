@@ -1,0 +1,14 @@
+{
+  "name": "restaurant-review-2020",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon ./index.js"
+  },
+  "dependencies": {
+    "express": "~4.16.1",
+    "express-es6-template-engine": "^2.2.1",
+    "pg-promise": "^10.4.4"
+  }
+}
