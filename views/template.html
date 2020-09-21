@@ -2,11 +2,21 @@
 
 <head>
   <title>Express</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  ${partial}
+    <header class="header">
+        ${!!is_logged_in ? `
+            <a href="/users/logout">Logout</a>
+            ` : `
+            <a href="/users/login">Login</a>
+        `}
+    </header>
+    <main>
+        ${partial}
+    </main>
 </body>
 
 </html>

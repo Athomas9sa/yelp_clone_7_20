@@ -1,3 +1,4 @@
+"use strict";
 const db = require("./conn");
 
 class RestaurantModel {
@@ -28,7 +29,7 @@ class RestaurantModel {
       const response = await db.any(`SELECT * FROM restaurant;`);
       return response;
     } catch (error) {
-      console.error("ERROR: ", error);
+      console.error("ERROR: ", error.message);
       return error;
     }
   }
@@ -40,7 +41,7 @@ class RestaurantModel {
       );
       return response;
     } catch (error) {
-      console.error("ERROR: ", error);
+      console.error("ERROR: ", error.message);
       return error;
     }
   }
