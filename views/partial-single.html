@@ -1,0 +1,31 @@
+<h1>${title}</h1>
+<p>Food Type: ${data.category}</p>
+<p>${data.stars} Stars</p>
+
+<h2>REVIEWS</h2>
+<hr />
+
+${reviewList.map(review => { return `
+    <h3>${review.title}</h3>
+    <p>${review.review}</p>
+` }).join('')}
+
+<hr />
+
+<form action="/" method="POST">
+  <input type="hidden" name="restaurant_id" value="${data.id}" />
+  <label
+    >Title
+    <input type="text" name="review_title" placeholder="Review Title" />
+  </label>
+  <label
+    >My Review
+    <textarea
+      name="review_text"
+      placeholder="My review of this restaurant..."
+    ></textarea>
+  </label>
+  <button type="submit">Save Review</button>
+</form>
+
+<a href="/">Return to Homepage</a>
